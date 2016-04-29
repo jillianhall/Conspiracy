@@ -1,0 +1,19 @@
+body {
+	background-image: url("https://dl.dropboxusercontent.com/u/63252541/remoteprep/ship.jpg");
+	background-color: black;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+header {
+	text-align: center;
+}
+
+.post ul li {
+	list-style: none;
+}
+
+nav ul {
+	list-style-type: none;
+}

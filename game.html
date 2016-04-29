@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h1>FJS Conspiracies</h1>
+			</header>
+			<nav>
+				<ul>
+					<li><a href="index.html">News</a></li>
+					<li><a href="videos.html">Videos</a></li>
+					<li><a href="game.html">Game</a></li>
+					<li><a href="http://www.google.com" target="_blank">Forum</a></li>
+					<li><a href="about-us.html">About Us</a></li>
+					<li><a href="contact-us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+			<div id="content">
+			<h1>Catch the Alien</h1>
+				<img id="animate" src="http://static.tumblr.com/429840ee189254722f50802e19df50d1/ahvnyar/nkdn6k878/tumblr_static_7iz4540v8j48c48c04g8wokog.gif" height=70 width=50
+				style="position: relative; width: 50px; height: 70px;">
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){ animateImg(); })
+
+			function animateImg() {
+				var h = Math.floor(Math.random() * ($(window).height() - 70));
+				var w = Math.floor(Math.random() * ($(window).width() - 50));
+
+				$( "#animate" ).animate({
+    				top: h,
+    				left: w
+  				}, 1000, function() {
+   					animateImg();
+  				});		
+			}
+
+			$("#animate").click(function() {
+				$('#animate').stop();
+				alert("You Win!");
+			})
+		</script>
+	</body>
+</html>
